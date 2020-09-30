@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Top Top Top",
+    "version": "1.0",
+    "description": "Instantly view the top posts from any subreddit you right-click.",
+    "web_accessible_resources" : [
+        "images/greenicon.png"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action" : { 
+        "default_icon" : "images/greenicon.png"
+    },
+    "icons": {
+        "16": "images/greenicon.png",
+        "32": "images/greenicon.png",
+        "48": "images/greenicon.png",
+        "128": "images/greenicon.png"
+    },
+    "content_scripts" : [
+    { 
+    "matches" : [ 
+        "<all_urls>"
+    ], 
+    "js" : [
+        "content.js"]
+    }
+    ]
+    }
